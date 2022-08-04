@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <form method="POST" action="">
+        {{form.hidden_tag()}}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-5">Register Here</legend>
+           <div class="form-group">
+               {{ form.user_name.label(class="form-control-label")}}
+               {% if form.user_name.errors %}
+                    {{form.user_name(class="form-control is-invalid ")}}
+                    {% for error in form.user_name.errors%}
+                        <span class="text-danger">{{error}}</span>
+                    {% endfor %}
+                    {%else%}
+                    {{form.user_name(class="form-control")}}
+               {% endif %}
+           </div>
+        </fieldset>
+        <div class="form-group">
+               {{ form.email.label(class="form-control-label")}}
+               {% if form.email.errors %}
+                    {{form.email(class="form-control is-invalid ")}}
+                    {% for error in form.email.errors%}
+                        <span class="text-danger">{{error}}</span>
+                    {% endfor %}
+                    {%else%}
+                    {{form.email(class="form-control")}}
+               {% endif %}
+        </div>
+        <div class="formgroup">
+            {{form.password.label(class = "form-control-label")}}
+            {% if form.password.errors %}
+                {{form.password(class = "form-control is-invalid")}}
+            {% for error in form.password.errors %}
+                <span class="text-danger">{{error}}</span>
+            {% endfor %}
+            {% else %}
+            {{form.password(class = "form-control")}}
+            {%endif%}
+        </div>
+        <br>
+        <div class="formgroup">
+            {{form.retype.label(class = "form-control-label")}}
+            {% if form.retype.errors %}
+                {{form.retype(class = "form-control is-invalid")}}
+            {% for error in form.retype.errors %}
+                <span class="text-danger">{{error}}</span>
+            {% endfor %}
+            {% else %}
+            {{form.retype(class = "form-control")}}
+            {%endif%}
+        </div>
+        <br>
+        <div class="form-group">
+            {{form.submit(class="btn", style ="background-color: lightblue; color:white")}}
+        </div>
+    </form>
+</div>
+
+{% endblock content%}

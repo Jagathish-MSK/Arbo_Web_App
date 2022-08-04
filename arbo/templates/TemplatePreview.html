@@ -1,0 +1,37 @@
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+{% endblock style%}
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container section1">
+    <h3 class="text-center p-3" style="color: #59BCF5;">Choose A Template</h3>
+</div>
+<div class="page">
+    <div class="row">
+        <div class="col col-md-3 offset-md-1">
+            <a href="{{url_for('Temp1')}}"><img src="{{url_for('static', filename='images/temp1.png')}}"
+                                                height="300px" width="250px"
+                                                alt="Template1"></a>
+            <p class="text-center"><label>Template 1</label></p>
+        </div>
+        <div class="col col col-md-3 offset-md-1">
+            <a href="{{url_for('Temp2')}}"> <img
+                    src="{{url_for('static', filename='images/temp2.png')}}" height="300px" width="250px"
+                    alt="Template2"></a>
+            <p class="text-center"><label>Template 2</label></p>
+        </div>
+        <div class="col col col-md-3 offset-md-1">
+            <a href="{{url_for('Temp5')}}"><img src="{{url_for('static', filename='images/temp5.png')}}"
+                                                height="300px" width="250px"
+                                                alt="Template4"></a>
+            <p class="text-center"><label>Template 5</label></p>
+        </div>
+    </div>
+    <br>
+    <strong class="m-3" style="color: #59BCF5">2021 © ARBO.COM | Terms and Conditions | Privacy and Cookie
+    Statement</strong>
+</div>
+
+{% endblock content%}

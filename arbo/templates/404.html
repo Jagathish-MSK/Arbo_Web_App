@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>404 Page Not Found</title>
+    <style>
+        *{box-sizing: border-box}
+        html,body{
+            margin: 0;
+            padding: 0;
+            x-overflow: hidden;
+        }
+        .error{
+            width: 100vw;
+            height: 100vh;
+            background-image:url({{url_for('static', filename = 'images/notfound.svg')}});
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="error">
+    </div>
+</body>
+</html>

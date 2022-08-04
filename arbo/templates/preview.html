@@ -1,0 +1,104 @@
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+{% endblock style%}
+
+{% extends 'base2.html' %}
+
+{% block content %}
+<br><br><br>
+
+<a style="text-decoration: none;color: black;" href="{{url_for('home')}}">
+    <div class="row">
+        <form name="temp1">
+            <div class="container section1" >
+                <div class="page body">
+                    <div class="Temp1Head">
+                        <h2>{{val["Name"]}}</h2>
+                        <p>Lot no.200, Old beach Stree, Denmark</p>
+                        <p>Mobile NO :{{val["MobileNumber"]}}</p>
+                        <p>Email : abc@gmail.com</p>
+                    </div>
+                    <div class="Temp1body">
+                        <div>
+                            <div class="content">
+                                <p class="innerP">CAREER OBJECTIVE</p>
+                            </div>
+                            <div class="div">
+                                <p style="text-align: justify">
+                                    &emsp;&emsp;&emsp;I am looking forward to work with an organization which offers a
+                                    challenging opportunity to
+                                    enhance my
+                                    knowledge, skills and experience that would allow me to contribute towards achieving
+                                    the organization's goals to the best of my potential.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="content">
+                                <p class="innerP">PERSONAL INFORMATION</p>
+                            </div>
+                            <div class="div">
+                                <p>
+                                    Full Name&emsp;&emsp;&emsp;:&nbsp;{{val["Name"]}} <br>
+                                    Fathers' s Name&emsp;:&nbsp;{{val["fathername"]}}<br>
+                                    Age&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;:&nbsp;{{val["Age"]}}<br>
+                                    Gender&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;:&nbsp;<br>
+                                    Date of Birth&emsp;&emsp;:&nbsp;<br>
+                                    Marital status &emsp;&nbsp; :&nbsp; <br>
+                                    Occupation &emsp;&emsp; :&nbsp;<br>
+                                    Interest &emsp;&emsp;&emsp;&emsp;:&nbsp;<br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="content">
+                                <p class="innerP">EDUCATIONAL BACKGROUND</p>
+                            </div>
+                            <div class="div">
+                                <p>
+                                <p class="imp">
+                                    <b>SSLC</b>
+                                <li><br>&ensp;&ensp;&ensp;
+
+                                </li>
+                                <br>
+                                <b>HIGHER SECONDARY</b>
+                                <li><br>&ensp;&ensp;&ensp;
+
+                                </li>
+                                <br>
+                                <b>UG</b>
+                                <li><br>&ensp;&ensp;&ensp;
+
+                                </li>
+                                <br>
+                                </p>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="content">
+                                <p class="innerP">SKILLS</p>
+                            </div>
+                            <div class="div">
+                                <p>
+                                <ul>
+                                    <li>Teamwork</li>
+                                    <li>Adaptability</li>
+                                    <li>Punctuality</li>
+                                    <li>Problem Solving Abilities</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</a>
+<br><br>
+
+{% endblock content%}

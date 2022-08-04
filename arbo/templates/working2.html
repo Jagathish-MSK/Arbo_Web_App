@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <h4 style="color: #59BCF5;text-align: center">Welcome {{session['name']}} </h4>
+    <h6 style="color: 59BCF5; text-align: center">Speak To Vihara</h6>
+    <div class="row" style="justify-content: center; align-items: center">
+        <div class="col-sm-6">
+            <a href="{{url_for('preview2')}}"><img src="{{url_for('static', filename='images/mic.png')}}" alt="#mic"
+                                                   style="width:50%"></a>
+        </div>
+        <div class="col-sm-6">
+            <img src="{{url_for('static', filename='images/man.png')}}" alt="#man" style="width:70%">
+        </div>
+    </div>
+    <section class="text-center">
+        <button class="btn" style="background-color: #59BCF5">Preview</button>
+        <button class="btn" style="background-color: #59BCF5">Download</button>
+    </section>
+</div>
+
+{% endblock content%}

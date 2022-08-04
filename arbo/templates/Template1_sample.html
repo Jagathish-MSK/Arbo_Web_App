@@ -1,0 +1,113 @@
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+{% endblock style%}
+
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<div class="container section1">
+    <h3 class="text-center p-3" style="color: #59BCF5; animation: animate
+                1.5s linear infinite;">One Step Requrie To Meet <span> Vihara </span></h3>
+</div>
+<div class="row">
+    <div class="page">
+        <form method="post" action="main.py">
+            <div class="template">
+                <div class="page body">
+                    <div class="Temp1Head">
+                        <h2>William Bark</h2>
+                        <p>Lot no.200, Old beach Stree ,Denmark</p>
+                        <p>Mobile NO :+91 55555 55555</p>
+                        <p>Email :abc@gmail.com</p>
+                    </div>
+                    <div class="Temp1body">
+                        <div>
+                            <div class="content" style="padding:2px">
+                                <p class="innerP">CAREER OBJECTIVE</p>
+                            </div>
+                            <div class="div">
+                                <p style="text-align: justify">
+                                    &emsp;&emsp;&emsp;I am looking forward to work with an organization which offers a
+                                    challenging opportunity to
+                                    enhance my
+                                    knowledge, skills and experience that would allow me to contribute towards achieving
+                                    the organization's goals to the best of my potential.
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="content"  style="padding:2px">
+                                <p class="innerP">PERSONAL INFORMATION</p>
+                            </div>
+                            <div class="div">
+                                <p>
+                                    Full Name&emsp;&emsp;&emsp;&nbsp;:&nbsp;William Bark <br>
+                                    Fathers' s Name&emsp;:&nbsp; Robert Bark<br>
+                                    Mother' s Name&emsp;:&nbsp; Elizabeth<br>
+                                    Gender&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;:&nbsp;Male<br>
+                                    Date of Birth&emsp;&emsp;:&nbsp;12-03-1999<br>
+                                    Age&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;:&nbsp;26<br>
+                                    Marital status &emsp;&nbsp; :&nbsp; Single<br>
+                                    Occupation &emsp;&emsp; :&nbsp; Project Manager<br>
+                                    Interest &emsp;&emsp;&emsp;&emsp;:&nbsp; Sketching,Coding <br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="content"  style="padding:2px">
+                                <p class="innerP">EDUCATIONAL BACKGROUND</p>
+                            </div>
+                            <div class="div">
+
+                                <p>
+                                    <b>SSLC</b>
+                                <li>Denmark Hr Sec School,<br>&ensp;&ensp;&ensp; 2010-2011, 87%</li>
+                                <br>
+                                <b>HIGHER SECONDARY</b>
+                                <li>Denmark Hr Sec School,<br>&ensp;&ensp;&ensp;2013-2014, 76%</li>
+                                <br>
+                                <b>B.sc IT</b>
+                                <li>Denmark College,<br>&ensp;&ensp;&ensp;2014-2019, 81%</li>
+                                <br>
+                                </p>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div class="content"  style="padding:2px">
+                                <p class="innerP">SKILLS</p>
+                            </div>
+                            <div class="div">
+                                <p>
+                                <ul>
+                                    <li>Teamwork</li>
+                                    <li>Adaptability</li>
+                                    <li>Punctuality</li>
+                                    <li>Problem Solving Abilities</li>
+                                </ul>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <footer style="float:right;color: grey"> ARBO.com</footer>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<br>
+<div class="row">
+    <button class="btn m-2">
+        <a href="{{url_for('working')}}"
+           style="background-color: #59BCF5;color: white;padding: 10px;text-decoration: none">Go with this
+            Template</a>
+    </button>
+</div>
+<br>
+
+
+{% endblock content%}

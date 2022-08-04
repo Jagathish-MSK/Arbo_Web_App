@@ -1,0 +1,83 @@
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+{% endblock style%}
+
+{% extends 'base2.html' %}
+
+{% block content %}
+<br><br><br>
+
+<a style="text-decoration: none;color: black;" href="{{url_for('home')}}">
+    <div class="row">
+        <form name="temp1">
+            <div class="container section1">
+                <div class="page2 body">
+                    <div class='left'>
+                        <h2>{{val["Name"]}}</h2><br>
+                        <h5><b><u>PERSONAL INFO</u></b></h5>
+                        <p><b>Email</b></p>
+                        <p>{{val["EmailId"]}}</p>
+                        <p><b>Contact</b></p>
+                        <p>+91 {{val["MobileNumber"]}}</p>
+                        <p><b>Date of Birth</b></p>
+                        <p>{{val["DateofBirth"]}}</p>
+                        <p><b>Address</b></p>
+                        <p>
+                        <Address>{{val["DoorNumber"]}}, {{val["Street"]}}, {{val["City"]}}</Address>
+                        </p>
+                        <p><b>Marital Status</b></p>
+                        <p>{{val["MaritalStatus"]}}</p><br>
+                        <h5><b><u>LANGUAGES KNOWN</u></b></h5>
+                        <P>* Tamil</P>
+                        <p>* English</p>
+                    </div>
+                    <div class='right'>
+                        <br>
+                        <p style="text-align: justify;">
+                            &emsp;&emsp;&emsp;I am looking forward to work with an organization which offers a
+                            challenging opportunity to enhance my knowledge, skills and experience that would allow me
+                            to contribute towards achieving the organization's goals to the best of my potential.
+                        </p>
+                        <p></p>
+                        <br><br>
+                        <h4><b>EDUCATION</b></h4>
+                        <ul>
+                            <p>
+                                <b>&emsp;&emsp;&emsp;SSLC</b>
+                            <li>{{val["SSLC"]["SSLCSchoolName"]}}({{val["SSLC"]["SSLCSchoolBoard"]}}),
+                                {{val["SSLC"]["SSLCPassedoutyear"]}}, {{val["SSLC"]["SSLCPercentage"]}}
+                            </li>
+                            <br>
+                            <b>&emsp;&emsp;&emsp;HIGHER SECONDARY</b>
+                            <li>{{val["HSC"]["HSCSchoolName"]}}({{val["HSC"]["HSCSchoolBoard"]}}),
+                                {{val["HSC"]["HSCPassedoutyear"]}}, {{val["HSC"]["HSCPercentage"]}}
+                            </li>
+                            <br>
+                            <b>&emsp;&emsp;&emsp;UG</b>
+                            <li>{{val["UG"]["UGCollegeName"]}},
+                                {{val["UG"]["UGPassedoutyear"]}}, {{val["UG"]["UGPercentage"]}}
+                            </li>
+                            </p>
+                        </ul>
+                        <br><br>
+                        <h4><b><u>SKILLS</u></b></h4>
+                        <p>
+                            * {{val["Skill"][1]}}<br>
+                            * {{val["Skill"][2]}}<br>
+                            * {{val["Skill"][3]}}<br>
+                            * {{val["Skill"][4]}}<br>
+                        </p>
+                        <br><br><br><br><br><br>
+                        <div>
+                            <footer style="float:right;color: grey"> ARBO.com</footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</a>
+<br>
+<br>
+
+{% endblock content%}

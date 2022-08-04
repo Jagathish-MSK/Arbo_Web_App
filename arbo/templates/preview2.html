@@ -1,0 +1,87 @@
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+{% endblock style%}
+
+{% extends 'base2.html' %}
+
+{% block content %}
+<br><br><br>
+
+<a style="text-decoration: none;color: black;" href="{{url_for('home')}}">
+    <div class="row">
+        <form method="post" action="main.py">
+            <div class="container section1">
+                <div class="page body">
+                    <div class="Temp2Head">
+                        <br>
+                        <h2 style="text-align: center;">{{val["Name"]}}</h2>
+                        <p style="text-align: center;">{{val["DoorNumber"]}},{{val["Street"]}}<br>
+                            {{val["City"]}}</p>
+                        <div class="wow">
+                            <div style="float: left;">&nbsp;&nbsp;&nbsp;Mobile No:{{val["MobileNumber"]}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Email Id:{{val["EmailId"]}}
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <h4><b><u>CAREER OBJECTIVE</u></b></h4>
+                        <p class="innerP" style="text-align: justify;">
+                            Customer Service Manager with extension in relationship managemebt,bussiness administration,
+                            strong communicaion,
+                            leadership and problem solving skills seeks to similar role with a strong company.
+                        </p>
+                    </div>
+                    <div>
+                        <h4><b><u>PERSONAL INFORMATION</u></b></h4>
+                        <p>
+                            Father's Name : {{val["fathername"]}}<br>
+                            Date of Birth : {{val["DateofBirth"]}}<br>
+                            Gender : {{val["Gender"]}}<br>
+                            Marital status : {{val["MaritalStatus"]}}<br>
+                        </p>
+                    </div>
+                    <div>
+                        <h4><b><u>EDUCATIONAL DETAILS</u></b></h4>
+                        <div class="col col-9">
+                            <table class="table" border="2" >
+                                <tr>
+                                    <th scope="col"class="col-2">Degree</th>
+                                    <th scope="col"class="col-2">Institute Name</th>
+                                    <th scope="col"class="col-2">Percentage</th>
+                                </tr>
+                                <tr>
+                                    <td>SSLC</td>
+                                    <td>{{val["SSLC"]["SSLCSchoolName"]}}</td>
+                                    <td>{{val["SSLC"]["SSLCPercentage"]}}&#37;</td>
+                                </tr>
+                                <tr>
+                                    <td>HSC</td>
+                                    <td>{{val["HSC"]["HSCSchoolName"]}}</td>
+                                    <td>{{val["HSC"]["HSCPercentage"]}}&#37;</td>
+                                </tr>
+                                <tr>
+                                    <td>UG</td>
+                                    <td>{{val["UG"]["UGCollegeName"]}}</td>
+                                    <td>{{val["UG"]["UGPercentage"]}}&#37;</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <h4><b><u>SKILLS</u></b></h4>
+                            <ul>
+                                <li>{{val["Skill"][1]}}</li>
+                                <li>{{val["Skill"][2]}}</li>
+                                <li>{{val["Skill"][3]}}</li>
+                                <li>{{val["Skill"][4]}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</a>
+<br>
+<br>
+{% endblock content%}

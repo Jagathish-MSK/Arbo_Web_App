@@ -1,0 +1,104 @@
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+{% endblock style%}
+
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<div class="container section1">
+    <h3 class="text-center p-3" style="color:#0f74aa; animation: animate
+                1.5s linear infinite;">Go with this template to build your resume</h3>
+</div>
+<br><br>
+<div class="row">
+    <form method="post" action="main.py">
+
+        <div class="template">
+            <div class="page body">
+                <div class="Temp2Head">
+                    <br>
+                    <h3 style="text-align: center;">William Black</h3>
+                    <p style="text-align: center;">100, Denmark road<br>Denmark</p>
+                    <div class="wow">
+                        <div style="float: left;">&nbsp;&nbsp;&nbsp;Mobile No:555 5555 5555 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Email Id:abc@gmail.com
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h5><b><u>CAREER OBJECTIVE</u></b></h5>
+                    <p class="innerP" style="text-align: justify;">
+                        Customer Service Manager with extension in relationship managemebt,bussiness administration,
+                        strong
+                        communicaion,
+                        leadership and problem solving skills seeks to similar role with a strong company.
+                    </p>
+                </div>
+                <div>
+                    <h5><b><u>PERSONAL INFORMATION</u></b></h5>
+                    <pre class="imp">
+                Father' s Name   : RRRRR
+                Date of Birth      : 12-12-1990
+                Gender               : Male
+                Marital status     : Single
+            </pre>
+                </div>
+                <div>
+                    <h5><b><u>EDUCATIONAL DETAILS</u></b></h5>
+                    <div class="col col-9">
+                        <table class="table" border="2">
+                            <tr>
+                                <th scope="col" class="col-2">Degree</th>
+                                <th scope="col" class="col-2">Institute Name</th>
+                                <th scope="col" class="col-2">Percentage</th>
+                            </tr>
+                            <tr>
+                                <td>SSLC</td>
+                                <td>Denmark Hr.sec school</td>
+                                <td>77%</td>
+                            </tr>
+                            <tr>
+                                <td>Higher Secondary</td>
+                                <td>Denmark Hr.Sec school</td>
+                                <td>88%</td>
+                            </tr>
+                            <tr>
+                                <td>B.sc IT</td>
+                                <td>AAA atrs college</td>
+                                <td>89%</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <h5><b><u>SKILLS</u></b></h5>
+                    <ul>
+                        <li>Teamwork</li>
+                        <li>Adaptability</li>
+                        <li>Punctuality</li>
+                        <li>Problem Solving Abilities</li>
+                    </ul>
+                </div>
+                <div>
+                    <footer style="float:right;color: grey"> ARBO.com</footer>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+<br>
+<div class="row">
+    <div class="col-sm-3 " style="display:flex;margin: auto;color: #59BCF5;margin-left:600px">
+        <button class="btn m-2">
+            <a href="{{url_for('working2')}}"
+               style="background-color: #59BCF5;color: white;padding: 10px;text-decoration: none">Go with this
+                Template</a>
+        </button>
+    </div>
+</div>
+<br>
+{% endblock content%}

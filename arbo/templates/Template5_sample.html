@@ -1,0 +1,92 @@
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+{% endblock style%}
+{% extends 'base.html' %}
+{% block content %}
+<br>
+<div class="container section1">
+    <h3 class="text-center p-3" style="color:#0f74aa; animation: animate
+                1.5s linear infinite;">Go with this template to build your resume</h3>
+</div>
+<br><br>
+<div class="template">
+    <div class="page2 body">
+        <div class='left'>
+            <h2>Sushmitha K</h2>
+            <h4><b><u>PERSONAL INFO</u></b></h4>
+            <p><b>Email</b></p>
+            <p>mpksusmi1506@gmail.com</p>
+            <p><b>Contact</b></p>
+            <p>+91 955335578</p>
+            <p><b>Date of Birth</b></p>
+            <p>15-06-2021</p>
+            <p><b>Address</b></p>
+            <p>
+            <Address>15,Denmark road,Denmark</Address>
+            </p>
+            <p><b>Marital Status</b></p>
+            <p>Single</p>
+            <h4><b><u>LANGUAGES KNOWN</u></b></h4>
+            <P>* Tamil</P>
+            <p>* English</p>
+            <h4><b><u>SKILLS</u></b></h4>
+
+            <p>
+                * Teamwork<br>
+                * Adaptability<br>
+                * Punctuality<br>
+                * Problem Solving Abilities<br>
+            </p>
+
+        </div>
+        <div class='right'>
+            <br>
+            <p style="text-align: justify;">
+                &emsp;&emsp;&emsp;I am looking forward to work with an organization which offers a challenging
+                opportunity to
+                enhance my
+                knowledge, skills and experience that would allow me to contribute towards achieving
+                the organization's goals to the best of my potential.
+            </p>
+            <p></p>
+            <br><br>
+            <h4><b>EDUCATION</b></h4>
+            <ul>
+                <p>
+                    <b>&emsp;&emsp;&emsp;SSLC</b>
+                <li>Nirmala Girls Hr.Sec School,
+                    2015-2016, 88%
+                </li>
+                <br>
+                <b>&emsp;&emsp;&emsp;HIGHER SECONDARY</b>
+                <li>St.Joseph Girls Hr.sec School,
+                    2017-2018, 87%
+                </li>
+                <br>
+                <b>&emsp;&emsp;&emsp;B.Sc IT</b>
+                <li>Thiagarajar College,
+                    2018-2021, 87%
+                </li>
+                </p>
+            </ul>
+            <br><br>
+            <h4><b>INTERESTS</b></h4>
+            <P></P>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <div>
+            <footer style="float:right;color: grey"> ARBO.com</footer>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <button class="btn m-2 col">
+        <a href="{{url_for('working3')}}"
+           style="background-color: #59BCF5;color: white;padding: 10px;text-decoration: none">Go with this Template</a>
+    </button>
+</div>
+<br>
+
+
+{% endblock content %}

@@ -1,0 +1,92 @@
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+{% endblock style%}
+
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container section1">
+        <div class="row home">
+          <h3 class="text-center p-3 border-bottom" style="color: #59BCF5;">The Best Free Online Resume Builder</h3>
+            <h3 style="text-align:center;color: #59BCF5;"> Hello {{session['name']}} ! <br></h3>
+          <div class="col-sm-6 p-3"><img src="{{url_for('static', filename='images/section1.gif')}}" alt="#" style="width: 500px;height: 500px;"></div>
+          <div class="col-sm-6 p-4" style="display:flex;margin: auto;color: #59BCF5;">
+
+            <span>
+
+                <h3>Create A Professional Resume In a Few Clicks</h3>
+                <button class="btn m-2"><a href="{{url_for('Temppreview')}}"  style="background-color: #59BCF5;color: white;padding: 10px;text-decoration: none">Create Resume</a></button>
+                <button class="btn m-2"><a href="{{url_for('sophia')}}"  style="background-color: #59BCF5;color: white;padding: 10px;text-decoration: none">Play With Sofia</a></button>
+            </span>
+          </div>
+        </div>
+     <h3 class="text-center p-3" style="background-color: #59BCF5;color:white">A Free Qucik  And Easy Way To Create Your Professional Resume</h3>
+    <h5 class="text-center" style="color: #59BCF5;">Create-Download-Share</h5>
+</div>
+<br>
+
+<div class="container section2">
+    <h2 class="text-center mt-3 p-3" style="color: white;background-color: #59BCF5">Meet Vihara {{session['name']}}</h2> <br>
+    <div class="row">
+          <div class="col-sm-6" style="display:flex;margin: auto;color: #59BCF5;"><p>Vihara is a software program that performs automated, repetitive, pre-defined tasks. Bots typically imitate or replace human user behavior.
+              Because they are automated, they operate much faster than human users</p></div>
+          <div class="col-sm-6"><img src="{{url_for('static', filename='images/vihara.gif')}}" alt="#vihara" style="width: 500px;height: 500px;"></div>
+    </div>
+</div>
+
+<div class="container">
+    <h2 class="text-center m-3 p-2" style="background-color: #59BCF5;color: white">Steps To Be Followed</h2> <br>
+    <div class="row p-3" style="justify-content:center;align-items:center">
+        <div class="card col-sm-4 m-4" style="width:250px">
+            <img class="card-img-top" src="{{url_for('static', filename='images/template.png')}}" alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title" style="color: #59BCF5;">Choose Template</h4>
+                <p class="card-text">Choose a sleek design and layout to get started.</p>
+            </div>
+        </div>
+        <div class="card col-sm-4 m-4" style="width:250px">
+            <img class="card-img-top" src="{{url_for('static', filename='images/Listen.png')}}" alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title"  style="color: #59BCF5;">Speak To Vihara</h4>
+                <p class="card-text">Speak to the Vihara and lean back</p>
+            </div>
+        </div>
+        <div class="card col-sm-4 m-4" style="width:250px">
+            <img class="card-img-top" src="{{url_for('static', filename='images/download.png')}}" alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title"  style="color: #59BCF5;">Download</h4>
+                <p class="card-text">Uniqueness only in few talks.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <h2 class="text-center m-3 p-2 border-bottom" style="color: #59BCF5;background-color: white">What Users' Says About Us</h2> <br>
+  <div class="card-group">
+    <div class="card m-3 p-3" style="background-color : #59BCF5; color: #ffff">
+      <div class="card-body text-center">
+          <h4 class="border-bottom p-2">Vamshi Krishna</h4> <br>
+            <p class="card-text">Undoubtedly, Arbo.com was a great success for me. Within 5minutes, I had
+            created my resume and sent it with the email program.</p>
+      </div>
+    </div>
+      <div class="card m-3 p-3" style="background-color : #59BCF5; color: #ffff">
+      <div class="card-body text-center">
+          <h4 class="border-bottom p-2">Sai Kumar</h4> <br>
+        <p class="card-text">I received positive comments on my resume and found a great job very quickly. I certainly recommend arbo.com!</p>
+      </div>
+    </div>
+      <div class="card m-3 p-3" style="background-color : #59BCF5; color: #ffff">
+      <div class="card-body text-center">
+          <h4 class="border-bottom p-2">Nandha Kumar</h4> <br>
+        <p class="card-text">I find it very handy that I can organise all of
+            my resumes and applications in one place with arbo.com. It holds such beautiful resume templates!</p>
+      </div>
+    </div>
+  </div>
+    <strong class="m-3" style="color: #59BCF5">2021 © ARBO.COM | Terms and Conditions | Privacy and Cookie Statement</strong>
+</div>
+<br>
+{% endblock content%}

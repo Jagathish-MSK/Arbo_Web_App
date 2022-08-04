@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        <div class="fieldset">
+            <legend class="border-bottom m-3">Login Here</legend><br>
+            <div class="form-group">
+                {{ form.user_name.label(class = "form-control-label") }}
+                {% if form.user_name.errors %}
+                    {{ form.user_name(class = "form-control is-invalid") }}
+                    {% for error in form.user_name.errors %}
+                        <span>{{error}}</span>
+                    {% endfor %}
+                    {% else %}
+                    {{ form.user_name(class = "form-control") }}
+                {% endif %}
+            </div>
+            <br>
+            <div class="form-group">
+                {{ form.password.label(class = "form-control-label") }}
+                {% if form.password.errors %}
+                    {{ form.password(class = "form-control is-invalid") }}
+                    {% for error in form.password.errors %}
+                        <span>{{error}}</span>
+                    {% endfor %}
+                    {% else %}
+                    {{ form.password(class = "form-control") }}
+                {% endif %}
+            </div>
+            <br>
+            <div class="form-group">
+                {{ form.login(class="btn", style="background-color: lightblue; color:white") }}
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock content%}
